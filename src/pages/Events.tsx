@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import EventCard from "@/components/EventCard";
 import { Calendar, Clock } from "lucide-react";
+import SEO from "@/components/SEO";
 
 interface Event {
   id: number;
@@ -51,6 +52,11 @@ const Events = () => {
 
   return (
     <div className="min-h-screen py-20">
+      <SEO 
+        title="Learning Events - AU Dev Hub"
+        description="Join hands-on coding workshops, bootcamps, and tech talks at Air University. Free programming events for students to learn web development, mobile apps, AI, and more."
+        keywords="coding workshops Air University, programming bootcamp Pakistan, tech events students, web development workshop, mobile app development, AI machine learning events"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">

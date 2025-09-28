@@ -2,10 +2,16 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Calendar, Code2, BookOpen, Trophy, Lightbulb } from "lucide-react";
 import DiscordIcon from "@/components/ui/discord-icon";
+import SEO from "@/components/SEO";
 
 const Landing = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="AU Dev Hub - Air University Developers Community"
+        description="Join 1,000+ student developers at Air University. Learn programming, build projects, find mentors, and kickstart your tech career. Free workshops, coding bootcamps & community support."
+        keywords="Air University developers, programming community, coding bootcamp, student developers Pakistan, tech mentorship, software development learning"
+      />
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

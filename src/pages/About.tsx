@@ -26,14 +26,14 @@ const About = () => {
               <h2 className="text-2xl font-bold">Our Mission</h2>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              AU Dev Hub is a student-driven platform dedicated to nurturing the next generation of technology leaders. 
-              We believe every student, regardless of their coding background, deserves access to quality learning resources, 
+              AU Dev Hub is a student-driven platform dedicated to nurturing the next generation of technology leaders.
+              We believe every student, regardless of their coding background, deserves access to quality learning resources,
               mentorship, and a supportive community to help them achieve their dreams in tech.
             </p>
             <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">🎓 Student-First Approach</h4>
               <p className="text-blue-800 dark:text-blue-200 text-sm">
-                We understand the unique challenges university students face - tight budgets, academic pressure, 
+                We understand the unique challenges university students face - tight budgets, academic pressure,
                 and the need for practical skills. That's why our programs are designed with students in mind.
               </p>
             </div>
@@ -70,36 +70,35 @@ const About = () => {
               <Users className="h-6 w-6 text-primary" />
               <h2 className="text-2xl font-bold">Community Maintainer</h2>
             </div>
-            
+
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-shrink-0">
                 <img
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop&crop=face"
+                  src="https://avatars.githubusercontent.com/u/94890956?v=4"
                   alt="Community Maintainer"
                   className="w-32 h-32 rounded-full object-cover ring-4 ring-primary/20"
                 />
               </div>
-              
+
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold mb-2">Alex Rodriguez</h3>
+                <h3 className="text-2xl font-bold mb-2">Yasir Nawaz</h3>
                 <p className="text-lg text-primary font-medium mb-4">
-                  Community Lead & Student Mentor
+                  Developer & Tech Explorer
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Started coding as a freshman with zero experience and now works at Microsoft. Passionate about 
-                  helping students overcome the same challenges I faced. Founded AU Dev Hub to ensure no student 
-                  has to navigate their coding journey alone.
+                  Passionate about building full-stack applications, exploring IoT projects, and customizing Linux systems. I enjoy sharing knowledge and helping others grow in tech.
+
                 </p>
                 <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg mb-6">
                   <p className="text-yellow-800 dark:text-yellow-200 text-sm font-medium">
                     💡 "Every expert was once a beginner. The key is having the right support system."
                   </p>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <Button variant="outline" size="sm" asChild>
                     <a
-                      href="https://github.com"
+                      href="https://github.com/sudoyasir"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -110,7 +109,7 @@ const About = () => {
                   </Button>
                   <Button variant="outline" size="sm" asChild>
                     <a
-                      href="https://linkedin.com"
+                      href="https://linkedin.com/in/sudoyasir"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -121,7 +120,7 @@ const About = () => {
                   </Button>
                   <Button variant="outline" size="sm" asChild>
                     <a
-                      href="mailto:hello@audevhub.org"
+                      href="mailto:sudoyasir@gmail.com"
                       className="flex items-center gap-2"
                     >
                       <Mail className="h-4 w-4" />
@@ -142,23 +141,23 @@ const About = () => {
               <h2 className="text-2xl font-bold">New to Coding? You're Welcome Here!</h2>
             </div>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Every expert was once a beginner. We've all been there - staring at a blank screen, 
-              wondering if we'll ever understand this "coding thing." The truth is, coding is a skill 
+              Every expert was once a beginner. We've all been there - staring at a blank screen,
+              wondering if we'll ever understand this "coding thing." The truth is, coding is a skill
               like any other, and with the right support system, anyone can learn it.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white dark:bg-gray-800/50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2 text-green-600 dark:text-green-400">💡 No Experience? No Problem!</h4>
                 <p className="text-sm text-muted-foreground">
-                  Our workshops start from absolute zero. We'll teach you what a variable is, 
+                  Our workshops start from absolute zero. We'll teach you what a variable is,
                   how to think like a programmer, and build your first projects step by step.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-800/50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2 text-blue-600 dark:text-blue-400">🤝 Peer Support System</h4>
                 <p className="text-sm text-muted-foreground">
-                  Get paired with study buddies, join beginner-friendly study groups, 
+                  Get paired with study buddies, join beginner-friendly study groups,
                   and learn alongside other students who are just starting their journey.
                 </p>
               </div>
@@ -181,11 +180,11 @@ const About = () => {
               <h2 className="text-2xl font-bold">Open Source & Learning by Doing</h2>
             </div>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              AU Dev Hub is built by students, for students. Our platform is completely open source, 
-              meaning you can see how everything works and even contribute to making it better. We believe 
+              AU Dev Hub is built by students, for students. Our platform is completely open source,
+              meaning you can see how everything works and even contribute to making it better. We believe
               in transparency and learning by doing.
             </p>
-            
+
             <div className="bg-muted/30 rounded-lg p-6">
               <h3 className="font-semibold mb-3">Ways to Get Involved:</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
@@ -195,7 +194,7 @@ const About = () => {
                 <li>• <strong>Advanced:</strong> Mentor others and lead technical discussions</li>
               </ul>
             </div>
-            
+
             <div className="mt-6 text-center">
               <Button asChild>
                 <a

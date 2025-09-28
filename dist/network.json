@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Alex Chen",
+      "department": "Computer Science - Junior",
+      "role": "Full-Stack Learning Path",
+      "bio": "Started coding freshman year, now building web apps with React and Node.js. Love helping beginners debug their first programs! Currently interning at a startup.",
+      "github": "https://github.com/alexchen",
+      "linkedin": "https://linkedin.com/in/alexchen",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "department": "Design + CS Double Major",
+      "role": "Frontend & UI/UX Focus",
+      "bio": "Sophomore passionate about making technology accessible and beautiful. Leading our beginner-friendly workshop series. Always happy to review your portfolio!",
+      "github": "https://github.com/sarahjohnson",
+      "linkedin": "https://linkedin.com/in/sarahjohnson",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 3,
+      "name": "Marcus Williams",
+      "department": "Business → Self-taught Developer",
+      "role": "Career Changer - Mentor",
+      "bio": "Switched from business to tech junior year through online courses and community support. Now a senior SWE intern at Microsoft. Proof that it's never too late to start!",
+      "github": "https://github.com/marcuswilliams",
+      "linkedin": "https://linkedin.com/in/marcuswilliams", 
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 4,
+      "name": "Emily Zhang",
+      "department": "Data Science - Senior",
+      "role": "Python & ML Specialist",
+      "bio": "Grad school bound! Love using Python for data analysis and machine learning. Running study groups for math-heavy CS courses. Ask me about research opportunities!",
+      "github": "https://github.com/emilyzhang",
+      "linkedin": "https://linkedin.com/in/emilyzhang",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 5,
+      "name": "Jordan Kim",
+      "department": "Cybersecurity - Sophomore",
+      "role": "Security & Ethical Hacking",
+      "bio": "Fascinated by cybersecurity and ethical hacking. Organizing our CTF team and security workshops. Former liberal arts major who discovered coding through a random elective!",
+      "github": "https://github.com/jordankim",
+      "linkedin": "https://linkedin.com/in/jordankim",
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 6,
+      "name": "Maya Patel",
+      "department": "Psychology + CS Minor",
+      "role": "Mobile Development & UX Research",
+      "bio": "Building apps that help with mental health and student wellness. Combining psychology insights with technology. Great person to talk to about interdisciplinary projects!",
+      "github": "https://github.com/mayapatel",
+      "linkedin": "https://linkedin.com/in/mayapatel",
+      "avatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 7,
+      "name": "Tyler Brooks",
+      "department": "Engineering - Freshman",
+      "role": "Complete Beginner",
+      "bio": "Just started my coding journey! Learning Python in CS101 and loving it. Looking for study buddies and project partners. Future goal: contribute to open source projects!",
+      "github": "https://github.com/tylerbrooks",
+      "linkedin": "https://linkedin.com/in/tylerbrooks",
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 8,
+      "name": "Zoe Martinez",
+      "department": "Game Development - Junior",
+      "role": "Unity & C# Developer", 
+      "bio": "Indie game developer working on my thesis project - a puzzle game about climate change. Also teach intro programming workshops because I love seeing the 'aha!' moments.",
+      "github": "https://github.com/zoemartinez", 
+      "linkedin": "https://linkedin.com/in/zoemartinez",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+    }
+  ]
+}
