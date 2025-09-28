@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Calendar, Code2, BookOpen, Trophy, Lightbulb } from "lucide-react";
+import DiscordIcon from "@/components/ui/discord-icon";
 
 const Landing = () => {
   return (
@@ -226,6 +227,97 @@ const Landing = () => {
                   <li>• Technical interviews</li>
                   <li>• Leadership & mentoring</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Community Section */}
+      <section className="py-20 bg-muted/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Join Our Thriving Community
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Connect with like-minded developers, get help when you're stuck, and celebrate your wins together
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Discord Community */}
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-8 rounded-xl border border-indigo-200 dark:border-indigo-800 text-center group hover:shadow-lg transition-smooth">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-100 dark:bg-indigo-900/40 mb-6 group-hover:bg-indigo-200 dark:group-hover:bg-indigo-800/60 transition-smooth">
+                <DiscordIcon className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">Discord Community</h3>
+              <p className="text-muted-foreground mb-6">
+                Join our active Discord server with 24/7 help channels, study rooms, project showcases, and daily coding discussions. Get instant help and make lasting friendships!
+              </p>
+              <ul className="text-sm text-muted-foreground mb-6 space-y-2">
+                <li>💬 Real-time coding help & support</li>
+                <li>🎮 Fun coding challenges & games</li>
+                <li>📚 Study groups & pair programming</li>
+                <li>🎉 Celebrate your coding milestones</li>
+              </ul>
+              <Button asChild size="lg" className="btn-primary">
+                <a href="https://discord.gg/CzKTwxP7qr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Join Discord
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+
+            {/* GitHub Community */}
+            <div className="bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/20 dark:to-slate-900/20 p-8 rounded-xl border border-gray-200 dark:border-gray-800 text-center group hover:shadow-lg transition-smooth">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-900/40 mb-6 group-hover:bg-gray-200 dark:group-hover:bg-gray-800/60 transition-smooth">
+                <Code2 className="h-8 w-8 text-gray-600 dark:text-gray-400" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">Open Source Hub</h3>
+              <p className="text-muted-foreground mb-6">
+                Contribute to real projects, build your portfolio, and collaborate with fellow students on GitHub. Perfect for beginners and experienced developers alike!
+              </p>
+              <ul className="text-sm text-muted-foreground mb-6 space-y-2">
+                <li>🚀 Beginner-friendly projects</li>
+                <li>🤝 Collaborative development</li>
+                <li>📊 Build your GitHub profile</li>
+                <li>🏆 Gain real-world experience</li>
+              </ul>
+              <Button asChild variant="outline" size="lg" className="btn-secondary">
+                <a href="https://github.com/AU-Dev-Hub" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Explore Projects
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center gap-4 bg-card p-6 rounded-xl border shadow-sm">
+              <div className="flex -space-x-2">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" 
+                  alt="Community member" 
+                  className="w-10 h-10 rounded-full border-2 border-background"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" 
+                  alt="Community member" 
+                  className="w-10 h-10 rounded-full border-2 border-background"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" 
+                  alt="Community member" 
+                  className="w-10 h-10 rounded-full border-2 border-background"
+                />
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground border-2 border-background flex items-center justify-center text-sm font-medium">
+                  +1K
+                </div>
+              </div>
+              <div className="text-left">
+                <p className="font-semibold">Join 1,000+ student developers</p>
+                <p className="text-sm text-muted-foreground">Your coding journey starts with community</p>
               </div>
             </div>
           </div>

@@ -36,7 +36,7 @@ AU Dev Hub is a student-driven platform designed to empower university students 
 
 ```bash
 # Clone the repository
-git clone <YOUR_GIT_URL>
+git clone https://github.com/AU-Dev-Hub/Website
 
 # Navigate to project directory
 cd au-dev-hub
