@@ -186,7 +186,7 @@ const Resources = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild>
-              <a href="mailto:resources@audevhub.org" className="flex items-center gap-2">
+              <a href="mailto:sudoyasir@gmail.com" className="flex items-center gap-2">
                 📝 Suggest a Resource
               </a>
             </Button>

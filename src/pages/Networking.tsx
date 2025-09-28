@@ -242,7 +242,7 @@ const Networking = () => {
               👨‍💻 Add Your Profile on GitHub →
             </a>
             <a
-              href="mailto:community@audevhub.org"
+              href="mailto:sudoyasir@gmail.com"
               className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
             >
               💬 Need Help Joining? →

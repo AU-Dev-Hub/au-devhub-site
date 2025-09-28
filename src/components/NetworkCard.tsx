@@ -1,7 +1,7 @@
 import { Github, Linkedin, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import { getAvatarFromGitHubUrl } from "@/lib/github";
+import ImageWithFallback from "@/components/ui/image-with-fallback";
 
 interface Member {
   id: number;
@@ -19,39 +19,21 @@ interface NetworkCardProps {
 }
 
 const NetworkCard = ({ member }: NetworkCardProps) => {
-  const [imageError, setImageError] = useState(false);
-  const [imageLoading, setImageLoading] = useState(true);
-
   // Get avatar URL: use provided avatar or auto-generate from GitHub
   const avatarUrl = member.avatar || getAvatarFromGitHubUrl(member.github, 160);
   
   // Fallback avatar if GitHub avatar fails
   const fallbackAvatar = `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=160&h=160&fit=crop&crop=face`;
 
-  const handleImageLoad = () => {
-    setImageLoading(false);
-  };
-
-  const handleImageError = () => {
-    setImageError(true);
-    setImageLoading(false);
-  };
-
   return (
     <div className="card-modern p-6 group text-center">
       <div className="mb-4">
-        <div className="relative w-20 h-20 mx-auto mb-4">
-          {imageLoading && (
-            <div className="absolute inset-0 rounded-full bg-muted animate-pulse ring-2 ring-border" />
-          )}
-          <img
-            src={imageError ? fallbackAvatar : avatarUrl}
-            alt={member.name}
-            className={`w-20 h-20 rounded-full object-cover ring-2 ring-border group-hover:ring-primary transition-smooth ${
-              imageLoading ? 'opacity-0' : 'opacity-100'
-            }`}
-            onLoad={handleImageLoad}
-            onError={handleImageError}
+        <div className="w-20 h-20 mx-auto mb-4">
+          <ImageWithFallback
+            src={avatarUrl}
+            fallbackSrc={fallbackAvatar}
+            alt={`${member.name} avatar`}
+            className="w-20 h-20 rounded-full object-cover ring-2 ring-border group-hover:ring-primary transition-smooth"
           />
         </div>
         <h3 className="text-xl font-semibold mb-1 group-hover:text-primary transition-smooth">

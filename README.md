@@ -105,10 +105,10 @@ public/
 
 ## 📧 Contact
 
-- **General**: hello@audevhub.org
-- **Events**: events@audevhub.org  
-- **Resources**: resources@audevhub.org
-- **Support**: support@audevhub.org
+- **General**: sudoyasir@gmail.com
+- **Events**: sudoyasir@gmail.com  
+- **Resources**: sudoyasir@gmail.com
+- **Support**: sudoyasir@gmail.com
 
 ## 📄 License
 

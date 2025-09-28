@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="10" fill="#3b82f6"/>
+  <text x="50" y="25" font-family="system-ui" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">AU</text>
+  <text x="50" y="45" font-family="system-ui" font-size="10" fill="#ffffff" text-anchor="middle">DEV</text>
+  <text x="50" y="60" font-family="system-ui" font-size="10" fill="#ffffff" text-anchor="middle">HUB</text>
+  <circle cx="25" cy="80" r="3" fill="#ffffff"/>
+  <circle cx="50" cy="80" r="3" fill="#ffffff"/>
+  <circle cx="75" cy="80" r="3" fill="#ffffff"/>
+</svg>

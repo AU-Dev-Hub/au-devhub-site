@@ -14,12 +14,12 @@ const SEO = ({
   title = "AU Dev Hub - Air University Developers Community",
   description = "Join 1,000+ student developers at Air University. Learn programming, build projects, find mentors, and kickstart your tech career. Free workshops, coding bootcamps & community support.",
   keywords = "Air University, developers, programming, coding, students, tech community, software development, computer science, learning, mentorship, Pakistan",
-  image = "https://audevhub.netlify.app/images/og.png",
+  image = "https://audevhub.space/images/og.png",
   type = "website",
   canonical
 }: SEOProps) => {
   const location = useLocation();
-  const baseUrl = "https://audevhub.netlify.app";
+  const baseUrl = "https://audevhub.space";
   const currentUrl = `${baseUrl}${location.pathname}`;
   const canonicalUrl = canonical || currentUrl;
 

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Calendar, Code2, BookOpen, Trophy, Lightbulb } from "lucide-react";
 import DiscordIcon from "@/components/ui/discord-icon";
 import SEO from "@/components/SEO";
+import ImageWithFallback from "@/components/ui/image-with-fallback";
 
 const Landing = () => {
   return (
@@ -120,9 +121,9 @@ const Landing = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-card p-6 rounded-xl border">
               <div className="flex items-center gap-3 mb-4">
-                <img 
+                <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face" 
-                  alt="Student" 
+                  alt="Student avatar" 
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
@@ -138,9 +139,9 @@ const Landing = () => {
 
             <div className="bg-card p-6 rounded-xl border">
               <div className="flex items-center gap-3 mb-4">
-                <img 
+                <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" 
-                  alt="Student" 
+                  alt="Student avatar" 
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
@@ -156,9 +157,9 @@ const Landing = () => {
 
             <div className="bg-card p-6 rounded-xl border">
               <div className="flex items-center gap-3 mb-4">
-                <img 
+                <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" 
-                  alt="Student" 
+                  alt="Student avatar" 
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
@@ -302,20 +303,23 @@ const Landing = () => {
           <div className="text-center mt-12">
             <div className="inline-flex items-center gap-4 bg-card p-6 rounded-xl border shadow-sm">
               <div className="flex -space-x-2">
-                <img 
+                <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" 
-                  alt="Community member" 
+                  alt="Community member avatar" 
                   className="w-10 h-10 rounded-full border-2 border-background"
+                  showLoadingPlaceholder={false}
                 />
-                <img 
+                <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" 
-                  alt="Community member" 
+                  alt="Community member avatar" 
                   className="w-10 h-10 rounded-full border-2 border-background"
+                  showLoadingPlaceholder={false}
                 />
-                <img 
+                <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" 
-                  alt="Community member" 
+                  alt="Community member avatar" 
                   className="w-10 h-10 rounded-full border-2 border-background"
+                  showLoadingPlaceholder={false}
                 />
                 <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground border-2 border-background flex items-center justify-center text-sm font-medium">
                   +1K

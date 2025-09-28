@@ -34,7 +34,7 @@ User-agent: WhatsApp
 Allow: /
 
 # Sitemap location
-Sitemap: https://audevhub.netlify.app/sitemap.xml
+Sitemap: https://audevhub.space/sitemap.xml
 
 # Host directive
 Host: audevhub.netlify.app

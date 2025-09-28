@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, Code2, Heart, Users, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ImageWithFallback from "@/components/ui/image-with-fallback";
 
 const About = () => {
   return (
@@ -8,7 +9,12 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <img src="/images/logo.png" alt="AU Dev Hub" className="w-20 h-20" />
+            <ImageWithFallback 
+              src="/images/logo.png" 
+              alt="AU Dev Hub logo" 
+              className="w-20 h-20" 
+              showLoadingPlaceholder={false}
+            />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="gradient-primary bg-clip-text text-transparent">AU Dev Hub</span>
@@ -73,9 +79,9 @@ const About = () => {
 
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-shrink-0">
-                <img
+                <ImageWithFallback
                   src="https://avatars.githubusercontent.com/u/94890956?v=4"
-                  alt="Community Maintainer"
+                  alt="Community Maintainer avatar"
                   className="w-32 h-32 rounded-full object-cover ring-4 ring-primary/20"
                 />
               </div>

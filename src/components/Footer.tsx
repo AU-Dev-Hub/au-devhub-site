@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
 import DiscordIcon from "./ui/discord-icon";
+import ImageWithFallback from "./ui/image-with-fallback";
 
 const Footer = () => {
   return (
@@ -8,7 +9,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <div className="flex items-center space-x-2">
-              <img src="/images/logo.png" alt="AU Dev Hub" className="w-6 h-6" />
+              <ImageWithFallback 
+                src="/images/logo.png" 
+                alt="AU Dev Hub logo" 
+                className="w-6 h-6" 
+                showLoadingPlaceholder={false}
+              />
               <div className="text-lg font-semibold gradient-primary bg-clip-text text-transparent">
                 AU Dev Hub
               </div>
@@ -36,7 +42,7 @@ const Footer = () => {
               <DiscordIcon className="h-5 w-5" />
             </a>
             <a
-              href="mailto:hello@audevhub.org"
+              href="mailto:sudoyasir@gmail.com"
               className="text-muted-foreground hover:text-foreground transition-smooth"
               title="Send us an email"
             >
@@ -57,7 +63,7 @@ const Footer = () => {
             <a href="/resources" className="hover:text-foreground transition-smooth">Free Resources</a>
             <a href="/networking" className="hover:text-foreground transition-smooth">Student Network</a>
             <a href="/about" className="hover:text-foreground transition-smooth">About Us</a>
-            <a href="mailto:support@audevhub.org" className="hover:text-foreground transition-smooth">Support</a>
+            <a href="mailto:sudoyasir@gmail.com" className="hover:text-foreground transition-smooth">Support</a>
           </div>
         </div>
       </div>

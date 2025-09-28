@@ -325,7 +325,7 @@ A: Only edit your own profile unless you have explicit permission.
 
 - **Discord Community**: [Join our server](https://discord.gg/CzKTwxP7qr)
 - **GitHub Issues**: Open an issue for bugs or questions
-- **Email**: contact@audevhub.org
+- **Email**: sudoyasir@gmail.com
 
 ## 🎉 Thank You!
 
