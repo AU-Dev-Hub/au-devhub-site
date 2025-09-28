@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import NetworkCard from "@/components/NetworkCard";
-import { Users, Github } from "lucide-react";
+import AnimatedNetworkCard from "@/components/AnimatedNetworkCard";
+import FilterBar from "@/components/FilterBar";
+import NoResults from "@/components/NoResults";
+import LoadMoreCard from "@/components/LoadMoreCard";
+import { useFilterMembers } from "@/hooks/useFilterMembers";
+import SEO from "@/components/SEO";
+import { Users, Github, Filter } from "lucide-react";
 
 interface Member {
   id: number;
@@ -10,17 +16,45 @@ interface Member {
   bio: string;
   github: string;
   linkedin: string;
-  avatar: string;
+  avatar?: string; // Optional since we auto-generate from GitHub
 }
 
 const Networking = () => {
   const [members, setMembers] = useState<Member[]>([]);
   const [loading, setLoading] = useState(true);
 
+    // Initialize filtering hook with pagination
+  const {
+    searchTerm,
+    selectedDepartment,
+    selectedRole,
+    departments,
+    roles,
+    filteredMembers,
+    allFilteredMembers,
+    setSearchTerm,
+    setSelectedDepartment,
+    setSelectedRole,
+    clearFilters,
+    filterByDepartment,
+    filterByRole,
+    loadMore,
+    totalMembers,
+    filteredCount,
+    displayedCount,
+    previousDisplayCount,
+    hasMore,
+    canLoadMore,
+  } = useFilterMembers({ 
+    members, 
+    initialDisplayCount: 9, 
+    loadMoreCount: 6 
+  });
+
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const response = await fetch('/network.json');
+        const response = await fetch('/data/network.json');
         const data = await response.json();
         setMembers(data.members);
       } catch (error) {
@@ -48,6 +82,11 @@ const Networking = () => {
 
   return (
     <div className="min-h-screen py-20">
+      <SEO 
+        title="Student Community - AU Dev Hub"
+        description="Connect with fellow student developers at Air University. Find study partners, join project teams, and discover mentors. Search by department, role, or name to find your coding community."
+        keywords="student developers Air University, programming community Pakistan, coding study partners, tech mentorship, software development students, computer science networking"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -72,24 +111,22 @@ const Networking = () => {
         </div>
 
         {/* Stats */}
-        <div className="flex items-center justify-center gap-8 mb-16">
+        <div className="flex items-center justify-center gap-8 mb-12">
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary">{members.length}</div>
+            <div className="text-3xl font-bold text-primary">{totalMembers}</div>
             <div className="text-sm text-muted-foreground">Student Members</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary">
-              {new Set(members.map(m => m.department)).size}
-            </div>
+            <div className="text-3xl font-bold text-primary">{departments.length}</div>
             <div className="text-sm text-muted-foreground">Study Areas</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary">
-              {new Set(members.map(m => m.role.split(' ')[0])).size}
-            </div>
-            <div className="text-sm text-muted-foreground">Skill Levels</div>
+            <div className="text-3xl font-bold text-primary">{roles.length}</div>
+            <div className="text-sm text-muted-foreground">Different Roles</div>
           </div>
         </div>
+
+
 
         {/* Members Grid */}
         <section className="mb-16">
@@ -97,19 +134,92 @@ const Networking = () => {
             <Users className="h-6 w-6 text-primary" />
             <h2 className="text-2xl md:text-3xl font-bold">Student Community</h2>
           </div>
+
+          {/* Filter Bar */}
+          {!loading && members.length > 0 && (
+            <div className="mb-8">
+              <FilterBar
+                searchTerm={searchTerm}
+                onSearchChange={setSearchTerm}
+                selectedDepartment={selectedDepartment}
+                onDepartmentChange={setSelectedDepartment}
+                selectedRole={selectedRole}
+                onRoleChange={setSelectedRole}
+                departments={departments}
+                roles={roles}
+                totalMembers={totalMembers}
+                filteredCount={filteredCount}
+                onClearFilters={clearFilters}
+              />
+            </div>
+          )}
           
-          {members.length > 0 ? (
+          {loading ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {members.map((member) => (
-                <NetworkCard key={member.id} member={member} />
+              {[...Array(6)].map((_, i) => (
+                <div key={i} className="card-modern p-6 animate-pulse">
+                  <div className="flex flex-col items-center">
+                    <div className="w-20 h-20 bg-muted rounded-full mb-4"></div>
+                    <div className="h-4 bg-muted rounded w-32 mb-2"></div>
+                    <div className="h-3 bg-muted rounded w-24 mb-1"></div>
+                    <div className="h-3 bg-muted rounded w-28 mb-4"></div>
+                    <div className="h-12 bg-muted rounded w-full mb-4"></div>
+                    <div className="flex gap-2 w-full">
+                      <div className="h-8 bg-muted rounded flex-1"></div>
+                      <div className="h-8 bg-muted rounded flex-1"></div>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
-          ) : (
-            <div className="text-center py-12 bg-muted/30 rounded-xl">
-              <Users className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">No Members Found</h3>
-              <p className="text-muted-foreground">Be the first to join our community!</p>
+          ) : filteredMembers.length > 0 ? (
+            <div className="animate-in fade-in duration-300">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300">
+                {filteredMembers.map((member, index) => {
+                  const isNew = index >= previousDisplayCount;
+                  const animationDelay = isNew ? (index - previousDisplayCount) * 100 : 0;
+                  
+                  return (
+                    <AnimatedNetworkCard 
+                      key={member.id} 
+                      member={member} 
+                      delay={animationDelay}
+                      isNew={isNew}
+                    />
+                  );
+                })}
+                {canLoadMore && (
+                  <div className="transition-all duration-500 ease-out">
+                    <LoadMoreCard 
+                      onLoadMore={loadMore}
+                      remainingCount={filteredCount - displayedCount}
+                      loadMoreCount={6}
+                    />
+                  </div>
+                )}
+              </div>
+              
+              {/* Show all results info */}
+              <div className="text-center mt-8">
+                <p className="text-sm text-muted-foreground">
+                  Showing <span className="font-semibold text-foreground">{displayedCount}</span> of{" "}
+                  <span className="font-semibold text-foreground">{filteredCount}</span> members
+                  {hasMore && (
+                    <span className="text-primary ml-2">
+                      • {filteredCount - displayedCount} more available
+                    </span>
+                  )}
+                </p>
+              </div>
             </div>
+          ) : (
+            <NoResults
+              searchTerm={searchTerm}
+              selectedDepartment={selectedDepartment}
+              selectedRole={selectedRole}
+              onClearFilters={clearFilters}
+              totalMembers={totalMembers}
+            />
           )}
         </section>
 

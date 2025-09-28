@@ -1,0 +1,9 @@
+{
+  "id": 999,
+  "name": "Your Full Name",
+  "department": "Your Department",
+  "role": "Your Development Role",
+  "bio": "A brief description about yourself, your interests, and what you're working on. Keep it under 200 characters for best display.",
+  "github": "https://github.com/yourusername",
+  "linkedin": "https://linkedin.com/in/yourusername"
+}

@@ -21,7 +21,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('/events.json');
+        const response = await fetch('/data/events.json');
         const data = await response.json();
         setEvents(data.events);
       } catch (error) {

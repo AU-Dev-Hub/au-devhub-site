@@ -1,7 +1,8 @@
-import { Github, Linkedin, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Star, GitFork, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { getAvatarFromGitHubUrl } from "@/lib/github";
+import { useGitHubUser } from "@/hooks/useGitHubUser";
 
 interface Member {
   id: number;
@@ -11,16 +12,22 @@ interface Member {
   bio: string;
   github: string;
   linkedin: string;
-  avatar?: string; // Made optional since we'll auto-generate from GitHub
+  avatar?: string;
 }
 
-interface NetworkCardProps {
+interface EnhancedNetworkCardProps {
   member: Member;
+  showGitHubStats?: boolean;
 }
 
-const NetworkCard = ({ member }: NetworkCardProps) => {
+const EnhancedNetworkCard = ({ member, showGitHubStats = false }: EnhancedNetworkCardProps) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
+  
+  // Fetch GitHub data if stats are requested
+  const { userData: githubData, loading: githubLoading } = useGitHubUser(
+    showGitHubStats ? member.github : ''
+  );
 
   // Get avatar URL: use provided avatar or auto-generate from GitHub
   const avatarUrl = member.avatar || getAvatarFromGitHubUrl(member.github, 160);
@@ -61,9 +68,23 @@ const NetworkCard = ({ member }: NetworkCardProps) => {
         <p className="text-sm text-muted-foreground">{member.department}</p>
       </div>
 
-      <p className="text-muted-foreground text-sm mb-6 line-clamp-3">
+      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
         {member.bio}
       </p>
+
+      {/* GitHub Stats */}
+      {showGitHubStats && githubData && !githubLoading && (
+        <div className="flex items-center justify-center gap-4 mb-4 p-2 bg-muted/30 rounded-lg">
+          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+            <GitFork className="h-3 w-3" />
+            <span>{githubData.public_repos}</span>
+          </div>
+          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+            <Users className="h-3 w-3" />
+            <span>{githubData.followers}</span>
+          </div>
+        </div>
+      )}
 
       <div className="flex items-center justify-center gap-3">
         <Button
@@ -103,4 +124,4 @@ const NetworkCard = ({ member }: NetworkCardProps) => {
   );
 };
 
-export default NetworkCard;
+export default EnhancedNetworkCard;

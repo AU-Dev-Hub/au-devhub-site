@@ -1,0 +1,14 @@
+{
+  "id": 999,
+  "title": "Your Event Title",
+  "date": "2024-01-15",
+  "time": "6:00 PM - 8:00 PM",
+  "description": "Detailed description of what the event is about, what participants will learn, and who should attend.",
+  "link": "https://your-event-link.com",
+  "type": "upcoming",
+  "location": "Room 101, CS Building",
+  "instructor": "Your Name",
+  "tags": ["React", "JavaScript", "Web Development"],
+  "difficulty": "Beginner",
+  "capacity": 30
+}
