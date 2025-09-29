@@ -232,18 +232,18 @@ const Networking = () => {
             Edit the <code className="mx-1 px-2 py-1 bg-muted rounded text-sm">network.json</code> file 
             or reach out to us for help getting started.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://github.com"
+              href="https://github.com/AU-Dev-Hub/Website/blob/main/data/README.md#adding-your-profile-to-the-community"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-center"
             >
               👨‍💻 Add Your Profile on GitHub →
             </a>
             <a
               href="mailto:sudoyasir@gmail.com"
-              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-center"
             >
               💬 Need Help Joining? →
             </a>

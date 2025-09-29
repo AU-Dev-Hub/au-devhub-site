@@ -135,18 +135,18 @@ const Events = () => {
             We provide support, resources, and help you reach the community. 
             Add events by editing the <code className="mx-1 px-2 py-1 bg-muted rounded text-sm">events.json</code> file.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://github.com"
+              href="https://github.com/AU-Dev-Hub/au-devhub-site/blob/main/data/README.md#adding-an-event"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-center"
             >
               📝 Add Your Event on GitHub →
             </a>
             <a
               href="mailto:sudoyasir@gmail.com"
-              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-center"
             >
               💬 Get Event Planning Help →
             </a>
