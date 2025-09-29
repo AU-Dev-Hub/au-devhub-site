@@ -37,4 +37,4 @@ Allow: /
 Sitemap: https://audevhub.space/sitemap.xml
 
 # Host directive
-Host: audevhub.netlify.app
+Host: audevhub.space
