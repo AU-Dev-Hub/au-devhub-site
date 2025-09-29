@@ -301,31 +301,31 @@ const Landing = () => {
           </div>
 
           <div className="text-center mt-12">
-            <div className="inline-flex items-center gap-4 bg-card p-6 rounded-xl border shadow-sm">
-              <div className="flex -space-x-2">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-card p-6 rounded-xl border shadow-sm max-w-sm sm:max-w-none mx-auto">
+              <div className="flex -space-x-2 flex-shrink-0">
                 <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" 
                   alt="Community member avatar" 
-                  className="w-10 h-10 rounded-full border-2 border-background"
+                  className="w-10 h-10 rounded-full border-2 border-background object-cover flex-shrink-0"
                   showLoadingPlaceholder={false}
                 />
                 <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" 
                   alt="Community member avatar" 
-                  className="w-10 h-10 rounded-full border-2 border-background"
+                  className="w-10 h-10 rounded-full border-2 border-background object-cover flex-shrink-0"
                   showLoadingPlaceholder={false}
                 />
                 <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" 
                   alt="Community member avatar" 
-                  className="w-10 h-10 rounded-full border-2 border-background"
+                  className="w-10 h-10 rounded-full border-2 border-background object-cover flex-shrink-0"
                   showLoadingPlaceholder={false}
                 />
-                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground border-2 border-background flex items-center justify-center text-sm font-medium">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground border-2 border-background flex items-center justify-center text-sm font-medium flex-shrink-0">
                   +1K
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-center sm:text-left">
                 <p className="font-semibold">Join 1,000+ student developers</p>
                 <p className="text-sm text-muted-foreground">Your coding journey starts with community</p>
               </div>

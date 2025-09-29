@@ -30,13 +30,13 @@ const EventCard = ({ event }: EventCardProps) => {
   return (
     <div className="card-modern p-6 group">
       <div className="flex items-start justify-between mb-4">
-        <div className="flex-1">
-          <div className="flex items-start gap-2 mb-2">
+        <div className="flex-1 min-w-0">
+          <div className="flex flex-col sm:flex-row sm:items-start gap-2 mb-2">
             <h3 className="text-xl font-semibold group-hover:text-primary transition-smooth">
               {event.title}
             </h3>
             {event.title.toLowerCase().includes('beginner') || event.title.toLowerCase().includes('first') || event.title.toLowerCase().includes('zero') && (
-              <span className="bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-300 px-2 py-1 rounded-full text-xs font-medium">
+              <span className="bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-300 px-2 py-1 rounded-full text-xs font-medium whitespace-nowrap self-start">
                 🌱 Beginner
               </span>
             )}
