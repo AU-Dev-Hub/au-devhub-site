@@ -8,6 +8,15 @@
       "bio": "Started coding freshman year, now building web apps with React and Node.js. Love helping beginners debug their first programs.",
       "github": "https://github.com/sudoyasir",
       "linkedin": "https://linkedin.com/in/sudoyasir"
+    },
+     {
+      "id": 2,
+      "name": "Shahnawaz",
+      "department": "Artifial Intelligence",
+      "role": "Full Stack Developer",
+      "bio": "Just a dev who loves turning ideas into code.",
+      "github": "https://github.com/shahnawaz2003",
+      "linkedin": "https://linkedin.com/in/shah-nawaz-58545b245"
     }
   ]
 }

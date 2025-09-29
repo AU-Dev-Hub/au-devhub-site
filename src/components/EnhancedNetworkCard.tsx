@@ -33,7 +33,7 @@ const EnhancedNetworkCard = ({ member, showGitHubStats = false }: EnhancedNetwor
   const fallbackAvatar = `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=160&h=160&fit=crop&crop=face`;
 
   return (
-    <div className="card-modern p-6 group text-center">
+    <div className="card-modern p-6 group text-center h-full flex flex-col">
       <div className="mb-4">
         <div className="w-20 h-20 mx-auto mb-4">
           <ImageWithFallback
@@ -50,25 +50,27 @@ const EnhancedNetworkCard = ({ member, showGitHubStats = false }: EnhancedNetwor
         <p className="text-sm text-muted-foreground">{member.department}</p>
       </div>
 
-      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-        {member.bio}
-      </p>
+      <div className="flex-grow">
+        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+          {member.bio}
+        </p>
 
-      {/* GitHub Stats */}
-      {showGitHubStats && githubData && !githubLoading && (
-        <div className="flex items-center justify-center gap-4 mb-4 p-2 bg-muted/30 rounded-lg">
-          <div className="flex items-center gap-1 text-xs text-muted-foreground">
-            <GitFork className="h-3 w-3" />
-            <span>{githubData.public_repos}</span>
+        {/* GitHub Stats */}
+        {showGitHubStats && githubData && !githubLoading && (
+          <div className="flex items-center justify-center gap-4 mb-4 p-2 bg-muted/30 rounded-lg">
+            <div className="flex items-center gap-1 text-xs text-muted-foreground">
+              <GitFork className="h-3 w-3" />
+              <span>{githubData.public_repos}</span>
+            </div>
+            <div className="flex items-center gap-1 text-xs text-muted-foreground">
+              <Users className="h-3 w-3" />
+              <span>{githubData.followers}</span>
+            </div>
           </div>
-          <div className="flex items-center gap-1 text-xs text-muted-foreground">
-            <Users className="h-3 w-3" />
-            <span>{githubData.followers}</span>
-          </div>
-        </div>
-      )}
+        )}
+      </div>
 
-      <div className="flex items-center justify-center gap-3">
+      <div className="flex items-center justify-center gap-3 mt-auto">
         <Button
           variant="outline"
           size="sm"
