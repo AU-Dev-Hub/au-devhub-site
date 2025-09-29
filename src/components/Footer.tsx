@@ -33,7 +33,7 @@ const Footer = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://discord.gg/CzKTwxP7qr"
+              href="https://discord.gg/C68FUjYPFb"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-smooth"

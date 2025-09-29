@@ -269,7 +269,7 @@ const Landing = () => {
                 <li>🎉 Celebrate your coding milestones</li>
               </ul>
               <Button asChild size="lg" className="btn-primary">
-                <a href="https://discord.gg/CzKTwxP7qr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://discord.gg/C68FUjYPFb" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   Join Discord
                   <ArrowRight className="h-5 w-5" />
                 </a>

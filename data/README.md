@@ -323,7 +323,7 @@ A: Only edit your own profile unless you have explicit permission.
 
 ## 🆘 Getting Help
 
-- **Discord Community**: [Join our server](https://discord.gg/CzKTwxP7qr)
+- **Discord Community**: [Join our server](https://discord.gg/C68FUjYPFb)
 - **GitHub Issues**: Open an issue for bugs or questions
 - **Email**: sudoyasir@gmail.com
 
