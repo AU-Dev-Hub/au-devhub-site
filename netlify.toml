@@ -60,7 +60,7 @@
 
 # Specific headers for OG image (WhatsApp compatibility)
 [[headers]]
-  for = "/images/og.png"
+  for = "/images/og.jpg"
   [headers.values]
     Content-Type = "image/png"
     Cache-Control = "public, max-age=86400"

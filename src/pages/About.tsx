@@ -172,7 +172,7 @@ const About = () => {
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
               <h4 className="font-semibold mb-2 text-yellow-800 dark:text-yellow-200">🚀 Success Stories from Our Community</h4>
               <p className="text-yellow-700 dark:text-yellow-300 text-sm">
-                "I thought coding was only for 'math people.' One year later, I'm building apps and loving it!" - Sarah, Biology Major
+                "I thought coding was only for 'math people.' One year later, I'm building apps and loving it!" - Shahnawaz, AI Major
               </p>
             </div>
           </div>
@@ -194,8 +194,8 @@ const About = () => {
             <div className="bg-muted/30 rounded-lg p-6">
               <h3 className="font-semibold mb-3">Ways to Get Involved:</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• <strong>Beginners:</strong> Add events by editing <code className="bg-muted px-1 rounded">public/events.json</code> (great first contribution!)</li>
-                <li>• <strong>All levels:</strong> Add your profile to <code className="bg-muted px-1 rounded">public/network.json</code></li>
+                <li>• <strong>Beginners:</strong> Add events by editing <code className="bg-muted px-1 rounded">data/events.json</code> (great first contribution!)</li>
+                <li>• <strong>All levels:</strong> Add your profile to <code className="bg-muted px-1 rounded">data/network.json</code></li>
                 <li>• <strong>Intermediate:</strong> Help improve the website's features and design</li>
                 <li>• <strong>Advanced:</strong> Mentor others and lead technical discussions</li>
               </ul>

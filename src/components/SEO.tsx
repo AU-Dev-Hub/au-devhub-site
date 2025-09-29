@@ -14,7 +14,7 @@ const SEO = ({
   title = "AU Dev Hub - Air University Developers Community",
   description = "Join 1,000+ student developers at Air University. Learn programming, build projects, find mentors, and kickstart your tech career. Free workshops, coding bootcamps & community support.",
   keywords = "Air University, developers, programming, coding, students, tech community, software development, computer science, learning, mentorship, Pakistan",
-  image = "https://audevhub.space/images/og.png",
+  image = "https://audevhub.space/images/og.jpg",
   type = "website",
   canonical
 }: SEOProps) => {
